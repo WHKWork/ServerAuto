@@ -5,7 +5,10 @@ FROM python:3.14-slim
 WORKDIR /app
 
 # Kopier alle filer fra roden af mappen til roden af imaget
-COPY . . 
+#COPY . . 
+
+COPY CodeAlongDay3.py .
+COPY CodeAlongFunctions.py .
 
 # Kør scriptet, når Docker containeren starter
 CMD ["python", "CodeAlongDay3.py"]
