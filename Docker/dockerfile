@@ -8,4 +8,4 @@ WORKDIR /app
 COPY . . 
 
 # Kør scriptet, når Docker containeren starter
-CMD ["python", "CodeAlongDay3.py"]
+CMD ["python", "dockertest.py"]
