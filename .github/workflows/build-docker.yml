@@ -1,0 +1,17 @@
+name: Build and publish image to Docker
+on: 
+    push:
+        branches:
+            - Main
+
+jobs:
+    publish_image:
+        runs-on: windows-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: Build image
+              run: docker build ./api/ -t haagensenk/whktest:latest
+            - name: push image to docker
+              run: |
+                docker push haagensenk/whktest:latest
