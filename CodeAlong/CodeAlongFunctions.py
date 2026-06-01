@@ -1,4 +1,4 @@
-def myPrint(myString, myString2):
+def myPrint(myString, myString2, myString3):
     """
     Prints user input plus to console
 
@@ -10,4 +10,4 @@ def myPrint(myString, myString2):
         "Du skrev "user input"
 
     """
-    print(myString, myString2)
+    print(myString, myString2, myString3)

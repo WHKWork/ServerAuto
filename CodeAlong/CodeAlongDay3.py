@@ -4,4 +4,4 @@ print(help(CAF.myPrint))
 
 x = input("Skriv noget ")
 
-CAF.myPrint("Du skrev", x)
+CAF.myPrint("Du skrev", x, "!!!!!!!!!")
