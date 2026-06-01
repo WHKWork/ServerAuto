@@ -14,4 +14,5 @@ jobs:
               run: docker build ./Docker/ -t haagensenk/whktest:latest
             - name: push image to docker
               run: |
+                docker login -u haagensenk -p ${{ secrets.DOCKER_HUB}}
                 docker push haagensenk/whktest:latest
