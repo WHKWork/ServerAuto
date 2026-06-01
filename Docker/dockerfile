@@ -1,0 +1,11 @@
+# Hvilken version eller hvilket python image skal vi bruge?
+FROM python:3.14-slim
+
+# Angiv directory
+WORKDIR /app
+
+# Kopier alle filer fra roden af mappen til roden af imaget
+COPY . . 
+
+# Kør scriptet, når Docker containeren starter
+CMD ["python", "dockertest.py"]
