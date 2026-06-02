@@ -7,12 +7,29 @@ on:
 jobs:
     publish_image:
         runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+            packages: write
+
         steps:
-            - name: checkout
-              uses: actions/checkout@v4
-            - name: Build image
-              run: docker build ./Docker/ -t haagensenk/whktest:latest
-            - name: push image to docker
-              run: |
-                docker login -u haagensenk -p ${{ secrets.DOCKER_HUB}}
-                docker push haagensenk/whktest:latest
+            #- name: checkout
+            #  uses: actions/checkout@v4
+            #- name: Build image
+            #  run: docker build ./Docker/ -t haagensenk/whktest:latest
+            #- name: push image to docker
+            #  run: |
+            #    docker login -u haagensenk -p ${{ secrets.DOCKER_HUB }}
+            #    docker push haagensenk/whktest:latest
+
+            - name: log in to GTCJR
+              run: echo "${{ secrets.GITHUB_TOKEN}}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+            - name: build docker image
+              run: docker build -t ghcr.io/${{ github.repository.owner }}/whktest:latest ./docker
+
+            - name: run docker image
+              run: docker run ghcr.io/${{ github.repository_owner }}/wkhtest:latest
+
+            - name: push docker image
+              run: docker push ghcr.io/${{ github.repository_owner }}/whktest:latest
