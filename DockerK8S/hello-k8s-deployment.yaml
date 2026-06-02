@@ -17,4 +17,4 @@ spec:
       containers:
       - name: k8hello
         image: ghcr.io/whkwork/whktest:latest
-        ImagePullPolicy: IfNotPresent
+        imagePullPolicy: IfNotPresent
