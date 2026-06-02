@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8hello-deployment
+  labels:
+    app: k8hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8hello
+  template:
+    metadata:
+      labels:
+        app: k8hello
+    spec:
+      containers:
+      - name: k8hello
+        image: ghcr.io/whkwork/whktest:latest
+        ImagePullPolicy: IfNotPresent
