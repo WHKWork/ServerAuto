@@ -13,8 +13,8 @@ jobs:
             packages: write
 
         steps:
-            #- name: checkout
-            #  uses: actions/checkout@v4
+            - name: checkout
+              uses: actions/checkout@v4
             #- name: Build image
             #  run: docker build ./Docker/ -t haagensenk/whktest:latest
             #- name: push image to docker
