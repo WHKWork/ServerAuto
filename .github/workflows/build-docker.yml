@@ -29,10 +29,10 @@ jobs:
               run: echo "OWNER_LC=${GITHUB_REPOSITORY_OWNER,,}" >> $GITHUB_ENV
 
             - name: build docker image
-              run: docker build -t ghcr.io/${{ env.OWNER_LC }}/whktest:latest ./DockerK8S
+              run: docker build -t ghcr.io/$OWNER_LC/whktest:latest ./DockerK8S
 
             - name: run docker image
-              run: docker run ghcr.io/${{ env.OWNER_LC }}/whktest:latest
+              run: docker run ghcr.io/$OWNER_LC/whktest:latest
 
             - name: push docker image
-              run: docker push ghcr.io/${{ env.OWNER_LC }}/whktest:latest
+              run: docker push ghcr.io/$OWNER_LC/whktest:latest
