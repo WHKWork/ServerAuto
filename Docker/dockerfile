@@ -7,8 +7,7 @@ WORKDIR /app
 # Kopier alle filer fra roden af mappen til roden af imaget
 #COPY . . 
 
-COPY CodeAlongDay3.py .
-COPY CodeAlongFunctions.py .
+COPY dockertest.py .
 
 # Kør scriptet, når Docker containeren starter
 CMD ["python", "dockertest.py"]
