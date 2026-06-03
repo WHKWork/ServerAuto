@@ -1,20 +1,31 @@
-x = input("Write a fruit ")
+import time
+
+x = "banana"
 z = 1
+Omgange = 1
+Fruit = ""
 FruitIsBanana = False
+programRunning = True
 
-for y in x:
-    print(x[0:z])
-    z = z+1
-    if x == "banana":
-        FruitIsBanana = True
+while programRunning == True:
+    for y in x:
+        print(x[0:z])
+        z = z+1
+        time.sleep(1.0)
+        if z == 7:
+            FruitIsBanana = True
+            z = 1
+            Omgange = Omgange+1
+            time.sleep(1.0)
 
-if FruitIsBanana == True:
-    print("YES BABY THATS WHAT I LIKE TO SEE")
-else:
-    print("Wrong fruit, very sad!")
+    if FruitIsBanana == True:
+        print("YES BABY THATS WHAT I LIKE TO SEE, THATS THE", str(Omgange),"TH TIME I SPELLED BANANA")
+        FruitIsBanana = False
+    else:
+        print("Wrong fruit, very sad!")
 
-def fruit_help(self):
-    """
-    Du skal skrive en frugt, der er kun en række frugter der er korrekt
-    """
+    def fruit_help(self):
+        """
+        Du skal skrive en frugt, der er kun en række frugter der er korrekt
+        """
 
