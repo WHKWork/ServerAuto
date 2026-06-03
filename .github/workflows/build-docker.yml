@@ -31,8 +31,8 @@ jobs:
             - name: build docker image
               run: docker build -t ghcr.io/$OWNER_LC/whktest:latest ./DockerK8S
 
-            #- name: run docker image
-              #run: docker run ghcr.io/$OWNER_LC/whktest:latest
+            - name: run docker image
+              run: docker run -d ghcr.io/$OWNER_LC/whktest:latest
 
             - name: push docker image
               run: docker push ghcr.io/$OWNER_LC/whktest:latest
