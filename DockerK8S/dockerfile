@@ -9,5 +9,7 @@ WORKDIR /app
 
 COPY finalDay.py .
 
+ENV PYTHONUNBUFFERED=1
+
 # Kør scriptet, når Docker containeren starter
 CMD ["python", "finalDay.py"]
