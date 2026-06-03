@@ -10,4 +10,4 @@ COPY . .
 #COPY dockertest.py .
 
 # Kør scriptet, når Docker containeren starter
-CMD ["python", "dockertest.py"]
+CMD ["python", "finalDay.py"]
