@@ -20,6 +20,7 @@ while programRunning == True:
 
     if FruitIsBanana == True:
         print("YES BABY THATS WHAT I LIKE TO SEE, THATS THE", str(Omgange),"TH TIME I SPELLED BANANA")
+        time.sleep(1.0)
         FruitIsBanana = False
     else:
         print("Wrong fruit, very sad!")
