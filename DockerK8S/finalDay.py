@@ -7,6 +7,12 @@ Fruit = ""
 FruitIsBanana = False
 programRunning = True
 
+def fruit_help():
+    """
+    Du skal skrive en frugt, der er kun en række frugter der er korrekt
+    """
+
+
 while programRunning == True:
     for y in x:
         time.sleep(1.0)
@@ -22,12 +28,6 @@ while programRunning == True:
         print("YES BABY THATS WHAT I LIKE TO SEE, THATS THE", str(Omgange),"TH TIME I SPELLED BANANA")
         time.sleep(1.0)
         FruitIsBanana = False
-        print("updatetest")
     else:
         print("Wrong fruit, very sad!")
-
-    def fruit_help(self):
-        """
-        Du skal skrive en frugt, der er kun en række frugter der er korrekt
-        """
 
