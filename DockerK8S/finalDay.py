@@ -9,9 +9,9 @@ programRunning = True
 
 while programRunning == True:
     for y in x:
+        time.sleep(1.0)
         print(x[0:z])
         z = z+1
-        time.sleep(1.0)
         if z == 7:
             FruitIsBanana = True
             z = 1
@@ -22,6 +22,7 @@ while programRunning == True:
         print("YES BABY THATS WHAT I LIKE TO SEE, THATS THE", str(Omgange),"TH TIME I SPELLED BANANA")
         time.sleep(1.0)
         FruitIsBanana = False
+        print("updatetest")
     else:
         print("Wrong fruit, very sad!")
 
