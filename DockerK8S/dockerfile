@@ -5,9 +5,9 @@ FROM python:3.14-slim
 WORKDIR /app
 
 # Kopier alle filer fra roden af mappen til roden af imaget
-COPY . . 
+#COPY . . 
 
-#COPY dockertest.py .
+COPY finalDay.py .
 
 # Kør scriptet, når Docker containeren starter
 CMD ["python", "finalDay.py"]
